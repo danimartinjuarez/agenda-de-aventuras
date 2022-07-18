@@ -1,0 +1,42 @@
+#agend{
+    background-color: yellow;
+    margin: 2vw;
+    min-height: 65vh;
+    max-height: 65vh;
+}
+#body-agend{
+    background-color: aquamarine;
+    min-height: 100vh;
+
+}
+.card-header{
+    height: 12vh;
+    margin-top: 1vh;
+    text-align: center;
+    font-size: 8vw;
+}
+#agend-table{
+    background-color: cadetblue;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 90%;
+}
+#btn-create{
+    margin-left: 27vw;
+}
+
+.activity-image{
+    max-width: 8vw;
+    max-height: 5vh;
+}
+.scroll-table{
+    max-height: 45vh;
+    overflow: scroll;
+    max-width: 100vw;
+}
+.id-column{
+    max-width: 8vw;
+}
+.action-column{
+    max-width: 10vw;
+    
+}

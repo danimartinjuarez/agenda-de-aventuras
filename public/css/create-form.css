@@ -1,0 +1,16 @@
+#create-form{
+    min-height: 58vh;
+    margin: 2vw;
+}
+#btn-cancel{
+    margin-top: 2vh;
+    margin-left: 22vw;
+}
+.btn-submit{
+    margin: 2vw;
+
+}
+.btn-primary{
+    min-width: 60vw;
+    margin-left: 20vw;
+}
