@@ -1,7 +1,7 @@
 <footer class="sticky-footer text-black">
     <div class="container">
         <div class="copyright text-center my-auto">
-            <h4>Copyrigth &copy;ARI NOJO</h4>
+            <h5>copyright &copy;ARI NOJO</h5>
         </div>
     </div>
 </footer>

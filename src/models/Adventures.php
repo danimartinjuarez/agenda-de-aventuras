@@ -2,6 +2,7 @@
 
 namespace App\models;
 use App\Database;
+use mysqli;
 
 class Adventures {
     private ?int $id;
@@ -46,5 +47,16 @@ class Adventures {
     }
     public function getDate_time(){
         return $this->date_time;
+    }
+    public function findById($id){
+        $query = $this->database->mysql->query("SELECT * FROM `{$this->table}` WHERE `id` = {$id}" );
+        $result =$query->fetchAll();
+        return new Adventures($result[0]["id"], $result[0]["activity"], $result[0]["place"], $result[0]["date_time"],);
+    }
+    public function delete(){
+        $query = $this->database->mysql->query("DELETE FROM `{$this->table}` WHERE `{$this->table}`.`id`={$this->id}" );
+    }
+    public function save(){
+        $this->database->mysql->query("INSERT INTO `{$this->table}`(`activity`,`place`) VALUES ('$this->activity' , '$this->place');");
     }
 }

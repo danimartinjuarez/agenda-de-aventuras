@@ -10,6 +10,8 @@
             <div class="card-header py-3">
                 <h1 class="font-weight-bold text-black titulo-pagina">RESERVAS </h1>
             </div>
+                <a href="?action=create">
+                <center><button class="btn btn-primary text-center" type="button">crear nueva aventuria</button></center></a>
             
             <table class="table">
                 <thead>
@@ -23,14 +25,15 @@
                 <tbody>
                 <?php
                     foreach ($data["adventure"] as $adventure){
-                echo "                  
-                
-                    <tr>
-                        <th>{$adventure->getID()}</th>
-                        <td>{$adventure->getActivity()}</td>
-                        <td>{$adventure->getPlace()}</td>
-                        <td>{$adventure->getDate_time()}</td>
-                    </tr>";
+                        echo "                  
+                        
+                            <tr>
+                                <th>{$adventure->getID()}</th>
+                                <td>{$adventure->getActivity()}</td>
+                                <td>{$adventure->getPlace()}</td>
+                                <td>{$adventure->getDate_time()}</td>
+                                <td><a href='?action=delete&id={$adventure->getID()}'>🗑️</a></td>
+                            </tr>";
                 } ?>
                 </tbody>
             </table>
