@@ -59,4 +59,10 @@ class Adventures {
     public function save(){
         $this->database->mysql->query("INSERT INTO `{$this->table}`(`activity`,`place`) VALUES ('$this->activity' , '$this->place');");
     }
+    public function rename($place) {
+        $this->place= $place;
+    }
+    public function update(){
+        $this->database->mysql->query("UPDATE `{$this->table}` SET `place`='{$this->place}' WHERE `id`= '{$this->id}' ");
+    }
 }

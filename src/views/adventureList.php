@@ -30,7 +30,10 @@
                             echo "                
                                 <tr>
                                     <td class='id-column'>{$adventure->getID()}</td>
-                                    <td class='action-column'><a href='?action=delete&id={$adventure->getID()}'>🗑️</a></td>
+                                    <td class='action-column'>
+                                        <a href='?action=delete&id={$adventure->getID()}'>🗑️</a>
+                                        <a href='?action=edit&id={$adventure->getID()}'>📝</a>
+                                    </td>
                                     <td>{$adventure->getActivity()}</td>
                                     <td>{$adventure->getPlace()}</td>
                                     <td>{$adventure->getDate_time()}</td>
