@@ -2,6 +2,7 @@
 namespace App\controlers;
 use App\models\Adventures;
 use App\core\View;
+use SebastianBergmann\Environment\Console;
 
 class AdventuresControler{
     public function __construct(){
@@ -44,7 +45,7 @@ class AdventuresControler{
         new View("createAdventure");
     }
     public function store(array $request){
-        $newAdventure = new Adventures(Null,$request["adventure"], $request["place"]);
+        $newAdventure = new Adventures(Null,$request["adventure"], $request["place"], null, $request["number_of_persons"], $request["observations"], $request["date_quote"]);
         $newAdventure->save();
         $this->index();
     }
